@@ -1,0 +1,17 @@
+<script type="text/javascript">
+	
+/* 
+* Fix the console.log by replacing the single quotes in the 
+* comparison with the correct value 
+* Also add a comment explaining the reason for the answer
+*/ 
+for ( var a = 0; a < 5; a++ ) {
+  setTimeout(function(){
+    console.log( a == 5, 'What is the value of a.' ); 
+  }, 100); 
+}
+
+// 5 is the answer because the setTimeout makes it wait long enough for the loop to fully execute.
+// this makes a always 5
+
+</script>

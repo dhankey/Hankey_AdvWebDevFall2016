@@ -1,0 +1,16 @@
+<script type="text/javascript">/* 
+/* 
+* Fix the console.log by replacing the single quotes in the 
+* comparison with the correct value 
+*/ 
+function outerRun(){ 
+  function innerRun(){ 
+    console.log( a === 7, 'What is the value of a.' ); 
+    console.log( b === undefined, 'What is the value of b.' ); 
+  }
+  var a = 7; 
+  innerRun(); 
+  var b = 8;  
+} 
+outerRun();
+</script>
