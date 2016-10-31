@@ -1,0 +1,19 @@
+extends layout
+
+block content
+ h1=title
+    <br/>
+ 
+  a(href="./") Index
+  <br/>
+  a(href="./about") About
+  h2=message
+ form.form-horizontal(action="/form", method="post", role="form")
+        .form-group
+          label.control-label(for="name") Name<br/>     
+            input#name.form-control(name="name") 
+          label.control-label(for="email") <br/><br/> Email<br/>     
+            input#name.form-control(name="email")
+          label.control-label(for="comments") <br/><br/> Comments<br/>     
+            input#name.form-control(name="comments")        
+        input(type="submit" value="Submit" class="breakline") 

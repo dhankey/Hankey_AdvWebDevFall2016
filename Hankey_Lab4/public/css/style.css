@@ -1,0 +1,39 @@
+
+body {
+    background-image: url('../images/bodyBG.png');
+}
+
+h1 { color: #145d9b; }
+
+a
+{
+	text-decoration: none;
+	color: #145d9b;
+}
+
+a:hover
+{
+	color: #145d9b;
+	text-decoration: underline;
+}
+
+a:visited
+{
+	color: #145d9b;
+	text-decoration: none;
+}
+
+img { width: 50%; height: 50%;}
+
+.container
+{
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    border: 2px dotted #145d9b;
+}
+
+.breakline
+{
+    margin-top: 15px;
+}
