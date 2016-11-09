@@ -1,0 +1,30 @@
+extends layout
+
+block content
+ h1=title
+ p
+    a(href="../view") View
+ h2=message
+ form.form-horizontal(action="/update", method="post", role="form")
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="firstName") FirstName
+          .col-xs-12.col-sm-10
+            input#firstName.form-control(name="firstName" value="#{results.firstName}")
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="lastName") LastName
+          .col-xs-12.col-sm-10
+            input#lastName.form-control(name="lastName" value="#{results.lastName}")
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="department") Department
+          .col-xs-12.col-sm-2
+            input#department.form-control(name="department" value="#{results.department}")
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="jobTitle") JobTitle
+          .col-xs-12.col-sm-2
+            input#jobTitle.form-control(name="jobTitle" value="#{results.jobTitle}")
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="salary") Salary
+          .col-xs-12.col-sm-2
+            input#salary.form-control(name="salary" value="#{results.salary}")
+        input(type="submit" value="Update Employee" class="enter") 
+        input(type="hidden" name="_id" value="#{results._id}")
