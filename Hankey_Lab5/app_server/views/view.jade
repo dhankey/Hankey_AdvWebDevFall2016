@@ -1,0 +1,37 @@
+extends layout
+
+block content
+    h1=title
+    p
+        a(href="../") Home
+    p=removed
+    table(border="1")
+        thead   
+            tr
+                th FirstName
+                th LastName
+                th Department
+                th StartDate
+                th JobTitle
+                th Salary
+                th
+                th
+        tbody
+        - each stuff in results
+            tr
+                td 
+                    = stuff.firstName
+                td 
+                    = stuff.lastName
+                td 
+                    = stuff.department
+                td 
+                    =stuff.startDate.toDateString()
+                td 
+                    = stuff.jobTitle
+                td 
+                    = stuff.salary
+                td
+                    a(href="../update/#{stuff._id}") Update
+                td
+                    a(href="../view/#{stuff._id}") Delete

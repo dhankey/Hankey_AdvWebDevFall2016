@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title= title   
+    script(type="text/javascript").
+        window.onload = function() 
+        {
+          var button = document.querySelector(".enter");
+          button.onclick = function()
+          {
+            var controlls = document.querySelectorAll(".form-control");
+            var msg = false;
+            console.log("length: " + controlls.length);
+            for(var i = 0; i < controlls.length; i++)
+            {
+                
+                if(controlls[i].value == "")
+                    msg = true;
+            }
+            if(msg == true)
+            {
+                document.querySelector("h2").innerHTML = "Please fill out all information.";
+                document.querySelector(".form-horizontal").action = "/cancel";
+            }
+          }   
+        };
+  body
+    .container
+      block content
